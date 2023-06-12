@@ -2,13 +2,16 @@
     margin: 0px;
 }
 /* Footer */
+
 header{
-    background-image: url(https://cdn.melhoreshospedagem.com/wp/wp-content/uploads/2020/12/o-que-e-html-e-como-ele-funciona.jpg);
+    background-image: url(https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2021/06/15709_B332D02D7229092F.jpg?w=1200);
     background-position: center;
     background-size: cover;
-    height: 420px;
+    height: 620px;
+    
 }
 .logo{
+    cursor: pointer;
     display: flex;
     justify-content: center;
     padding: 10px;
@@ -26,14 +29,16 @@ header{
     text-decoration: none;
     color: white;
     font: 20px calibri;
+
+
 }
 .menu a:hover{
-    color: rgb(170, 113, 224);
+    color: rgb(169, 169, 169);
 }
 /* Main */
 
 .container-card{
-    margin-top: -200px;
+    margin-top: -400px;
     margin-left: 5%;
     margin-right: 5%;
     display: grid;
@@ -44,64 +49,367 @@ header{
     gap: 50px;
     justify-content: center;
 }
+@media (max-width: 770px){ 
+    .container-card{
+        margin-top: -400px;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: grid;
+    grid-template-areas: 
+    "card1" 
+    "card2"
+    "card3"
+    "card4"
+    "cerd5"
+    "card6";
+    gap: 50px;
+    justify-content: center;
+}
+}
+@media (min-width: 1210px){ 
+    .container-card{
+        margin-top: -400px;
+        margin-left: 5%;
+        margin-right: 5%;
+        display: grid;
+    grid-template-areas: 
+    "card1 card2 card3"
+    "card4 cerd5 card6";
+    gap: 50px;
+    justify-content: center;
+}
+}
 .card{
+    display: flex;
     color: aliceblue;
     width: 350px;
     height: 375px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
 }
-.card img{
-    width: 85px;
-    height: 85px;
-    padding: 20px;
+.card:hover{
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.6);
+
 }
-.card h2{
-    padding: 20px;
-    font-size: 40px;
+.icon img{
+    height: 100px;
+    width: 100px;
+    padding-top: 40px;
+    padding-left: 40px;
+
 }
-.card h5{
-    padding: 10px;
+.icon2{
+    transition: transform 0.6s ease;
 }
-.card button{
+
+.card:hover .icon2{
+    transform: translateX(170px) rotate(-15deg);
+  }
+.card-titulo{
+    transition: transform 0.4s ease;
+}
+.card:hover .card-titulo{
+    transform: translateY(-30px) rotate(8deg);
+}
+.card-descrição{
+    transition: transform 0.5s ease;
+}
+.card:hover .card-descrição{
+    transform: translateY(-37px) rotate(8deg);
+}
+.card-titulo h2{
+    font-size: 39px;
+    padding-left: 20px;
+}
+.card-descrição h5{
+    font-size: 18px;
+    padding-left: 20px;
+}
+.btn-saiba-mais button{
+    cursor: pointer;
+    height: 60px;
     width: 100%;
-    border: none;
-    padding: 20px;
-   
+    border: 1px solid;
+    border-color: white;
+    
 }
 .card1{
-    background-color: red;
+    background-color: #FA4D60;
 }
 .card2{
-    background-color: rgb(230, 52, 185);
+    background-color: #B570A2;
 }
 .card3{
-    background-color: rgb(77, 77, 255);
+    background-color: #64BCEE;
 }
 .card4{
-    background-color: orange;
+    background-color: #FA824A;
 }
 .card5{
-    background-color: rgb(2, 162, 184);
+    background-color: #5FB6B7;
 }
 .card6{
-    background-color: aqua;
+    background-color: #77CCDC;
 }
 /* empresa */
 .empresa{
-    background-image: url(https://www.kbrtec.com.br/landing-pages/images/criacao-sites-sao-paulo.png);
-    background-size: cover;
     margin-top: 20px;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 466px;
+    
 }
 .titulo{
-    padding-top: 20px;
+    font-size: 26px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #F27F33;
+    justify-self: center;
 }
 .conteudo{
-    padding-top: 20px;
-    padding-bottom: 20px;
+    color: #999999;
+    font-size: 23px;
+    padding-top: 40px;
+    padding-bottom: 40px;
     padding-left: 10%;
     padding-right: 10%;
+    text-align: center;
+}
+.btn button{
+    cursor: pointer;
+    font-size: 18px;
+    color: #AAAAAA;
+    height: 60px;
+    width: 120px;
+    border: 2px solid;
+    border-color: #999999;
+    transition: background-color 0.3s, color 0.3s;
+}
+.btn button:hover{
+    background-color: #999999;
+    color: #F0F0F0;
+}
+/* trabalhos */
+.trabalhos{
+    display: grid;
+    grid-template-columns: 280px 280px 280px 280px;
+    grid-template-areas: 
+    "titulo2 titulo2 titulo2 titulo2"
+    "circulo1 circulo2 circulo3 circulo4";
+}
+@media (max-width: 1110px){ 
+    .trabalhos{
+        display: grid;
+        grid-template-columns: 280px 280px;
+        grid-template-areas: 
+        "titulo2 titulo2"
+        "circulo1 circulo2"
+        "circulo3 circulo4";
+}
+}
+@media (max-width: 631px){ 
+    .trabalhos{
+        display: grid;
+        grid-template-columns: 280px;
+        grid-template-areas: 
+        "titulo2"
+        "circulo1"
+        "circulo2"
+        "circulo3"
+        "circulo4";
+}
+}
+.titulo2 {
+    grid-area: titulo2;
+    font-size: 20px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #F27F33;
+}
+.titulo2 h1{
+    display: flex;
+    justify-content: center;
+}
+.container-trab{
+    display: flex;
+    justify-content: center;
+}
+.circulo1{
+    grid-area: circulo1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.circulo2{
+    grid-area: circulo2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.circulo3{
+    grid-area: circulo3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.circulo4{
+    grid-area: circulo4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.circulo{
+    border-radius: 30px;
+    align-self: center;
+    justify-self: center;
+}
+.roda{
+    transition: transform 0.4s ease;
+}
+.circulo:hover .roda{
+    transform: rotatey(360deg);
+}
+.circulo:hover{
+    cursor: pointer;
+    width: 280px;
+    background-color: #edece6;
+}
+.trabalhos img{
+    justify-self: center;
+    width: 150px;
+    height: 150px;
+    margin-top: 40px;
+    border-radius: 500px;
+}
+.trabalhos h2{
+    color: #666666;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+}
+.trabalhos h4{
+    color: #666666;
+    padding-bottom: 40px;
+
+}
+/* contato' */
+.container-contato{
+    background-color: #333333;
+    height: 534px;
+    display: flex;
+    align-items: center;
+    justify-content:space-around;
+}
+@media (max-width: 950px) {
+    .container-contato{
+        background-color: #333333;
+        height: 534px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content:space-around;
+    }
+}
+.tabela{
+    display: grid;
+    grid-template-columns: 280px 280px;
+    grid-template-rows: 50px 50px 150px 50px;
+    grid-template-areas: 
+    "nome email"
+    "telef empr"
+    "msg msg"
+    "btn-enviar btn-enviar";
+    gap: 30px;
+}
+@media (max-width: 650px){
+    .tabela{
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: 50px 50px 50px 50px 150px 50px;
+        grid-template-areas: 
+        "nome"
+        "email"
+        "telef"
+        "empr"
+        "msg"
+        "btn-enviar";
+        gap: 10px;
+    }
+    .container-contato{
+        background-color: #333333;
+        height: 570px;
+        display: flex;
+        align-items: center;
+        justify-content:space-around;
+    }
+}
+
+.contato{
+    color: white;
+    font-size: 36px;
+}
+.nome{
+    grid-area: nome;
+}
+.email{
+    grid-area: email;
+}
+.telef{
+    grid-area: telef;
+}
+.empr{
+    grid-area: empr;
+}
+.msg{
+    grid-area: msg;
+}
+.btn-enviar{
+    cursor: pointer;
+    grid-area: btn-enviar;
+    color: white;
+    font-size: 20px;
+    background-color: #F47F35;
+    border: none;
+    transition: background-color 0.3s;
+}
+.btn-enviar:hover{
+    background-color: #954614;
+}
+/* footer */
+.container-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100px;
+}
+@media (max-width: 900px){
+    .container-footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        height: 140px;
+    }
+}
+.email-footer, .phone{
+    color: #9C9C9C;
+    font-size: 22px;
+    padding-top: 5px;
+    padding-bottom: 10px;
+}
+.by{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.by img{
+    width: 200px;
+    margin-top: 10px;
+}
+.by h5{
+    color: #9C9C9C;
+    padding-bottom: 15px;
 }
